@@ -1,0 +1,40 @@
+---
+tags:
+{% for topico in video.topicos %}  - {{ topico }}
+{% endfor %}
+---
+
+# {{ video.titulo }}
+
+**Publicado em:** {{ video.data_publicacao | format_date }}
+**Playlist:** {{ video.playlist or "Sem playlist" }}
+**Categorias:** {% for cat in video.categorias %}[{{ cat }}](../categorias/{{ cat | slugify }}.md){% if not loop.last %}, {% endif %}{% endfor %}
+
+---
+
+## Sobre este vídeo
+
+{{ video.resumo }}
+
+---
+
+## Assistir
+
+[Assistir no YouTube]({{ video.url }}){ .md-button .md-button--primary }
+
+---
+{% if video.links_relacionados %}
+## Vídeos relacionados
+
+*Mencionados na descrição deste vídeo:*
+
+{% for link in video.links_relacionados %}
+- [{{ link.video_id }}]({{ link.video_id }}.md) — [Ver no YouTube]({{ link.url }})
+{% endfor %}
+{% endif %}
+{% if video.topicos %}
+
+## Tópicos
+
+{% for topico in video.topicos %}`{{ topico }}`  {% endfor %}
+{% endif %}

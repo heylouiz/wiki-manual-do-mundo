@@ -1,0 +1,15 @@
+# {{ categoria }}
+
+{{ videos | length }} vídeo{{ 's' if videos | length != 1 else '' }} nesta categoria.
+
+---
+
+{% for video in videos %}
+## [{{ video.titulo }}](../videos/{{ video.video_id }}.md)
+
+**Publicado em:** {{ video.data_publicacao | format_date }}
+
+{{ video.resumo }}
+
+---
+{% endfor %}

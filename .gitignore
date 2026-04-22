@@ -1,0 +1,10 @@
+.env
+data/raw/
+data/processed/
+docs/videos/
+docs/categorias/
+docs/index.md
+site/
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,41 @@
+site_name: Wiki — Manual do Mundo
+site_description: Enciclopédia não-oficial do canal Manual do Mundo
+site_url: https://luizfrdasilva.github.io/wiki-manual-do-mundo
+repo_url: https://github.com/luizfrdasilva/wiki-manual-do-mundo
+repo_name: wiki-manual-do-mundo
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Modo escuro
+    - scheme: slate
+      primary: orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+
+plugins:
+  - search:
+      lang: pt
+
+extra:
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/MANUALDOMUNDO
+
+nav:
+  - Início: index.md

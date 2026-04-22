@@ -1,0 +1,23 @@
+# Wiki — Manual do Mundo
+
+Bem-vindo à wiki do canal [Manual do Mundo](https://www.youtube.com/MANUALDOMUNDO)!
+
+Este site reúne resumos, tópicos e referências cruzadas de todos os vídeos analisados do canal.
+
+---
+
+## Últimos vídeos
+
+{% for video in recent_videos %}
+### [{{ video.titulo }}](videos/{{ video.video_id }}.md)
+**{{ video.data_publicacao | format_date }}** — {{ video.resumo | truncate(150) }}
+
+{% endfor %}
+
+---
+
+## Categorias
+
+{% for cat, count in categorias %}
+- [{{ cat }}](categorias/{{ cat | slugify }}.md) — {{ count }} vídeo{{ 's' if count != 1 else '' }}
+{% endfor %}

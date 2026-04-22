@@ -1,0 +1,4 @@
+channel_url: https://www.youtube.com/MANUALDOMUNDO
+max_videos: 10
+language: pt
+output_dir: data/raw
